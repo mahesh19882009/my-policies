@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+:root {
+  --bg: #f3f6fb;
+  --text: #152033;
+  --primary: #155dfc;
+  --secondary: rgb(255, 255, 151);
+  --shadow: 0 18px 42px rgba(21, 32, 51, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+a {
+  text-decoration: underline;
+}
+
+.page-cntr {
+  max-width: 991px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Buttons */
+.btn {
+  height: 40px;
+  padding: 10px 20px;
+  line-height: 16px;
+  font-size: 14px;
+  border-radius: 20px;
+  border: 2px solid var(--primary);
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--primary);
+}
+
+.btn:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+}
+
+.btn.btn-secondary {
+  background-color: var(--secondary);
+}
+
+/* List */
+
+.policy-list {
+  display: grid;
+  gap: 20px;
+}
+
+.policy-card_info-list {
+  column-count: 2;
+  column-rule: 1px solid darkgray;
+  column-gap: 40px;
+}
+
+.policy-card__info {
+  color: var(--text);
+  font-size: 14px;
+  display: flex;
+  gap: 5px;
+  margin-bottom: 8px;
+}
+
+.policy-card__info-label {
+  font-weight: 500;
+}
+
+/* pagination */
+.pagination__pages button {
+  padding: 0;
+  border-radius: 50%;
+  line-height: 30px;
+  height: 30px;
+  width: 30px;
+  border: 1px solid var(--text);
+  cursor: pointer;
+}
+
+.pagination__button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+  .policy-card_info-list {
+    column-count: 1;
+    column-rule: 1px solid darkgray;
+    column-gap: 40px;
+  }
+}
